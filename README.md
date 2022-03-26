@@ -24,7 +24,7 @@ print(data)
 # update data
 data = {'key':'uuid key', 'data': 'meatball_change'}
 mb.update(data)
-data = mb.get(data = mb.get({"key":"uuid key"}))
+data = mb.get({"key":"uuid key"})
 print(data)
 {'uuid key':'meatball_change'}
 
@@ -36,7 +36,7 @@ with open('file','rb) as f:
 data = {data:'meatball'} <- Parameters are not used when uploading files.
 key = mb.append(data, _file)
 print(key)
-data = mb.get(data = mb.get({"key":"uuid key"}))
+data = mb.get({"key":"uuid key"})
 print(data)
 {'uuid key':'encoded file binary'}
 
