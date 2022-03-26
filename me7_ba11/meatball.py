@@ -279,7 +279,7 @@ class MeatBall(MeatBallCore):
 
     ## File upload and update
     # upload
-    with open('file','rb) as f:
+    with open('file','rb') as f:
         _file = f.read()
 
     data = {data:'meatball'} <- Parameters are not used when uploading files.
