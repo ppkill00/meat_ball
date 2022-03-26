@@ -265,14 +265,15 @@ class MeatBall(MeatBallCore):
     mb = MeatBall('meat.ball',)
     data = {data:'meatball'}
     key = mb.append(data)
-    data = mb.get(key)
+    print(key)
+    data = mb.get({"key":"uuid key"})
     print(data)
     {'uuid key':'meatball'}
 
     # update data
     data = {'key':'uuid key', 'data': 'meatball_change'}
     mb.update(data)
-    data = mb.get(key)
+    data = mb.get(data = mb.get({"key":"uuid key"}))
     print(data)
     {'uuid key':'meatball_change'}
 
@@ -283,14 +284,15 @@ class MeatBall(MeatBallCore):
 
     data = {data:'meatball'} <- Parameters are not used when uploading files.
     key = mb.append(data, _file)
-    data = mb.get(key)
+    print(key)
+    data = mb.get(data = mb.get({"key":"uuid key"}))
     print(data)
     {'uuid key':'encoded file binary'}
 
     # update to file
     data = {'key':'uuid key', 'data': 'meatball'} <- Parameters are not used when uploading files.
     mb.update(data, _file)
-    data = mb.get(key)
+    data = mb.get({"key":"uuid key"})
     print(data)
     {'uuid key':'encoded file binary'}
 
@@ -299,14 +301,15 @@ class MeatBall(MeatBallCore):
     mb = MeatBall('meat.ball',)
     data = {data:'meatball', enc='on'}
     key = mb.append(data)
-    data = mb.get(key)
+    print(key)
+    data = mb.get({"key":"uuid key"})
     print(data)
     {'uuid key':'meatball'}
 
     # update data with encrtyption
     data = {'key':'uuid key', enc='on', 'data': 'meatball_change'}
     mb.update(data)
-    data = mb.get(key)
+    data = mb.get({"key":"uuid key"})
     print(data)
     {'uuid key':'meatball_change'}
 
